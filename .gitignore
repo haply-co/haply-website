@@ -1,0 +1,5 @@
+# Deployment settings
+haply/settings/*_private.py
+haply/settings/private.py
+*.DS_Store
+*.pyc

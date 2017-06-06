@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+
+  <style> 
+    #canvas {
+      margin-top: -10px;
+      margin-left: -10px;
+    }
+  </style>
+
+  <script src="jquery.min.js"></script>
+  <script src="paper.min.js"></script>
+  <script type="text/paperscript"canvas="canvas">
+
+// Helper function to return a random number between two numbers
+var random = function (a, b) { 
+  return a + (Math.random() * (b - a)); 
+};
+
+// Helper function to return min of two numbers
+var min = function (a, b) {
+  if (a < b) return a;
+  else return b;
+};
+
+// Solve for y given circle radius and x 
+var circle_y = function (x, rad) { return Math.sqrt(Math.pow(rad, 2) - Math.pow(x, 2)); };
+
+var bubble_colors = ['#E2FFE6', '#DDFEFE', '#DEF6FD', '#FAECFF'];
+
+// Function to create a bubble 
+var bubble = function (pos, size) {
+  var b = new Path.Circle(pos, size);
+  b.strokeColor = bubble_colors[Math.floor(Math.random() * bubble_colors.length)];
+  b.strokeWidth = Math.ceil(1 + Math.random() * 4);
+  b.opacity = 0.1 + Math.random();
+  return b;
+};
+
+// Function to add a layer of bubbles 
+var add_bubbles = function (n, width, height) {
+  var bubbles = [];
+  var pos, rad, bub;
+  for (var i = 0; i < n; i++) {
+    pos = new Point(Math.random() * width, Math.random() * height);
+    rad = Math.random() * 10;
+    bub = bubble(pos, rad);
+    bubbles.push(bub);
+  }
+  return bubbles;
+};
+
+// Function to add a sand layer
+var add_sand = function (width, height) {
+    var path = new Path();
+    path.add(new Point(0, height)); 
+    // Slope down 
+    path.add(new Point(0, height - 100));
+    path.add(new Point(400, height - 80));
+    // Slope up again 
+    path.add(new Point(500, height - 50));
+    path.add(new Point(600, height - 80));
+    // Slope back down to the end 
+    path.add(new Point(width, height));
+
+    path.fillColor = 'beige';
+
+    path.smooth();
+};
+
+/* Running the slingshot simulation */
+$(document).ready(function () {
+
+      // Get the device size 
+      var width = $(window).width();
+      var height = $(window).height();
+
+      // Set the canvas to the device size 
+      $("#canvas").attr("width", width);
+      $("#canvas").attr("height", height);
+
+      // Colors and gradient width percentages for the sea gradient 
+      var sea_colors = ["#092B5A", "#092B5A", "#09738A", "#78A890", "#9ED1B7"];
+
+      // Make the background a nice gradient of blue/green
+      var background = new Path.Rectangle({
+        topLeft: new Point(0, 0), 
+        topRight: new Point(width, 0), 
+        bottomLeft: new Point(0, height), 
+        bottomRight: new Point(width, height),
+        fillColor: {
+          gradient: {stops: sea_colors},
+          origin: new Point(0, width / 2),
+          destination: new Point(0, 0)
+        }
+      });
+
+      // Add 120 bubbles total 
+      var bubble_layer1 = add_bubbles(60, width, height);
+      var bubble_layer2 = add_bubbles(60, width, height);
+
+      // Add a layer of sand 
+      var sand = add_sand(width, height);
+
+      var svg = project.importSVG("treasure-chest.svg");
+
+      var urchin_radius = 20;     // The radius of our projectile 
+      var arm_size = 350;         // The slingshot arm height 
+
+      view.draw();
+  });
+
+
+  </script>
+
+</head>
+
+<body>
+	<canvas id="canvas" width="1000" height="550" keepalive="true"></canvas>
+</body>
+
+</html>

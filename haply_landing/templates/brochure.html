@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- bootstrap css -->
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- customized css -->
+    <link href="{{ STATIC_URL }}css/brochure.css" rel="stylesheet">
+
+    <!-- custom fonts -->
+    <link href="{{ STATIC_URL }}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <style>
+        #logo-area {
+            background-color: #66236A;
+            margin-bottom: -60px;
+        }
+        #catchphrase {
+            color: white;
+        }
+        #explanation {
+            background-color: white;
+            color: #333;
+            padding: 50px;
+        }
+        #monitors {
+            background-color: #66236A;
+            margin-top: -80px;
+            color: white    ;
+        }
+        img {
+            margin-top: -70px;
+            margin-left: -10px;
+        }
+        #url {
+            margin-top: -50px;
+            margin-bottom: -100px;
+            margin-left: -25px;
+            color: #333;
+        }
+        #haply-logo {
+            margin-left: 10px;
+        }
+        /*.resources {
+          font-size: 14pt;
+        }*/
+    </style>
+
+</head>
+
+
+<body id="page-top" class="index">
+
+    <!-- <div class="row" id="demo"> -->
+        <!-- Where the SVG will be appended --> 
+        <!--<div class="demo"></div>-->
+        <!-- <h4 id="catchphrase">
+            Adding touch to change the way we interact with our digital worlds -->
+            <!--<span id="haply-highlight">Haply</span> is bringing touch to your virtual world-->
+       <!--  </h4>
+    </div> -->
+    <section id="logo-area">
+        <img src="{{STATIC_URL}}img/loooogo.png" id="haply-logo"/>
+    </section>
+
+    <!-- The technology/about section -->
+    <section id="explanation">
+      <h2>Resources</h2>
+      <h4><a href="http://www.cim.mcgill.ca/~adyn/research.html" target="_blank">McGill Centre for Intelligent Machines Applied Dynamics Group</a></h4>
+      <h4><a href="http://www.cim.mcgill.ca/~adyn/resources.html" target="_blank">Applied Dynamics Group Research</a></h4>
+      <h4><a href="https://drive.google.com/folderview?id=0Bxt_y6pIhiprQk5WeWM3Wk1iQ1k&usp=drive_web" target="_blank">Mechatronics Course Material</a></h4>
+      <h4><a href="https://drive.google.com/drive/folders/0B1Fht8keL_QTbGtDTExfaUZlTzg?usp=sharing" target="_blank">Student Portal</a></h4>
+      <h3>GitHub - Open Source Code</h3>
+      <h4><a href="https://github.com/crgallac/HapletBoard" target="_blank">Haplet Board</a></h4>
+      <h4><a href="https://github.com/crgallac/HapletFirmware" target="_blank">Haplet Firmware</a></h4>
+      <h4><a href="https://github.com/crgallac/HapletNativeUSB" target="_blank">Haplet Native USB</a></h4>
+      <h4><a href="https://github.com/crgallac/HapGit" target="_blank">HapGit</a></h4>
+    </section>
+
+    <section>
+        <div class="row contact" id="url">
+            <h4>Adding touch to change the way we interact <br>with our digital worlds<br></h4>
+        </div>
+    </section>
+
+    <!-- ball demo --> 
+    <!--
+    <script src="{{ STATIC_URL }}js/jquery-1.11.3.min.js"></script>
+    <script src="{{ STATIC_URL }}js/d3.min.js"></script>
+    <script src="{{ STATIC_URL }}js/brochure.js"></script>
+-->
+
+
+</body>
+
+</html>

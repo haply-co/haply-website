@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> Haply Robotics </title>
+
+    <!-- bootstrap css -->
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- customized css -->
+    <link href="{{ STATIC_URL }}css/landing.css" rel="stylesheet">
+
+    <!-- custom fonts -->
+    <link href="{{ STATIC_URL }}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body id="page-top" class="index">
+
+    <!-- Top navigation bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#page-top"> 
+                    
+                    <div id="haply-logo">
+                        <img src="{{ STATIC_URL }}img/haply-design/logo-horizontal.png" width="210px" height="70px"/>
+                    </div>
+
+                    <!-- <div id="haply-title">Haply</div>  -->
+                </a>
+            </div>
+
+            <!-- The toggle content -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio" id="technology" class="header-button">The Technology</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about" id="team" class="header-button">The Team</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="resources/" id="resources" class="header-button">Resources</a>
+                    </li>   
+                    <li class="page-scroll">
+                        <a href="kit/" id="resources" class="header-button">The Kit</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Cool landing display area with little demo -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <h3>Adding touch to technology to change the way we interact with our digital worlds</h3>
+                <img id="d3-pic" src="{{ STATIC_URL }}img/haply-design/d3-demo.png" width="400" height="300"/>
+            </div>
+            <br><br><br><br><br>
+            <div class="row">
+                <!-- Where the SVG will be appended --> 
+                <div class="demo"></div>
+            </div>
+
+            <div class="row">
+                <h3>A portable, low-cost, open-source haptic device, the Haplet aims to democratize force feedback haptics and make touch accessible for all</h3><br>
+                <img id="os-logo" src="{{ STATIC_URL }}img/open-source-gear.png" width="100" height="80"/>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- The technology/about section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 text-center">
+                    <h2 id="tech-section-header">The Technology</h2>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <br> 
+             <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                    <p>
+                        Haptics is the science of <span class="yellow-highlight">touch</span>. When you are interacting with objects in your day-to-day life, you are applying forces to those objects, but also receiving a force back. This feedback system allows us to feel the pull of a taught bow or the weight of a caught ball. 
+                    </p>
+                    <img src="{{ STATIC_URL }}img/haply-design/monitors-medium.png" id="monitors"/>
+                    <div id="tech-break"></div>
+                    <p>
+                        We are introducing technology that recreates this sense of touch in virtual environments, such as a game on your tablet or a surgical simulation running on your computer. Our device, called the Haplet, is the world's first device to use force-feedback haptic technology on a co-located screen, which means you can use it on any kind of screen, such as your tablet, mobile phone, monitor or laptop screen. 
+                    </p>
+
+                    </div>
+                    <div class="col-lg-2"></div>
+               
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/beta test section -->
+    <section id="contact">
+        <div class="container">
+            <!-- Preorder call to action! --> 
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 text-center">
+                    <!-- <h2 id="call-to-action">Sign up for our preorder!</h2> -->
+                    <h2 id="call-to-action">Interested in the Haplet?</h2>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <br>
+            <!-- The carousel of images --> 
+            <div class="row">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD1.png">
+                        </div>
+
+                        <div class="item">
+                            <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD2.png">
+                        </div>
+
+                        <div class="item">
+                            <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD3.png">
+                        </div>
+
+                        <div class="item">
+                            <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD4.png">
+                        </div>
+
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="carousel-left">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" id="carousel-right">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <img id="computer-gif" class="haplet-gif" src="{{ STATIC_URL }}img/gifs/computer.gif">
+                    <img id="tablet-gif" class="haplet-gif" src="{{ STATIC_URL }}img/gifs/tablet.gif">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <p id="call-to-action-text">
+
+                        <!-- Sign up here to be on an advanced order list for our kit - you'll be notified as soon as it's ready for pre-order! The kit comes with the Haplet, which easily clips on to your tablet or computer screen, usage instructions, an API, online support, and some demo apps to get you started. If you're a maker, you'll have a full suite of tools to tinker with the hardware and develop your own awesome happs.  -->
+
+                        For more information about the Haplet and to stay up to date on our development process, sign up here! Don't forget to check out some cool demos <a class="video-link" id="video-1" href="https://youtu.be/n3IKoW7KBCE" target="_blank"><b><u>here</u></b></a> and <a class="video-link" href="https://youtu.be/nK020GU9vF4" id="video-2" target="_blank"><b><u>here</u></b></a>. 
+
+                    </p>
+                    <!-- <p id="pricetag">$149.99</p> -->
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    
+                    <!-- Pre-order form --> 
+                    <!-- <form name="sentMessage" id="contactForm" novalidate action="{% url 'bye' %}" method="post"> -->
+                    <form action="/bye/" method="post">
+                        {% csrf_token %}
+
+                        <!-- The user's name --> 
+                        <!-- <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+
+                            </div>
+                        </div> -->
+                        <!-- The user's email address --> 
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <input type="email" class="form-control" placeholder="Email" id="email" name="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <!-- The user's message --> 
+                        <!-- <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <textarea rows="5" class="form-control" placeholder="Comments? Questions? Interested in beta testing? Please share!" id="message" data-validation-required-message="Please enter a message." name="message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            
+                            </div>
+                        </div> -->
+                        <br>
+                        <div class="row">
+                            <!-- The user's beta testing choice --> 
+                            
+                           <!--  <div class="col-lg-10 col-md-10 col-sm-6">
+                                <p id="interested"> I am interested in beta testing! </p>
+                            </div>
+
+                            <div class="col-lg-2 col-md-2 col-sm-6">
+                                <div id="beta-check"><span class="glyphicon glyphicon-ok"></span>
+                            </div> -->
+
+                            <!-- Hidden input checkbox --> 
+                            <!-- <input type="checkbox" id="actual-checkbox" name="beta" style="display:none"> -->
+
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg" id="signup-button">Sign me up!</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- The team section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 text-center">
+                    <h2 id="team-section-header">The Team</h2> <br>
+                    <!-- <p> Haply is a group of dedicated tech enthusiasts and entrepreneurs with expertise in haptics, robotics, and engineering. The team is currently located in Montreal. Interested in collaborating? Shoot us an email at <span id="haply-email">team@haply.co</span>! </p> -->
+                    <p> Haply is a group of dedicated tech enthusiasts and entrepreneurs with expertise in haptics, robotics, and engineering. The team is currently located in Montreal. Interested in collaborating? Shoot us an email at <span id="haply-email">haplyrobotics@gmail.com</span>! </p>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <br>
+            <div class="col-sm-4" id="colin" class="member">
+                <img src="{{ STATIC_URL }}img/colin-professional.png" class="img-responsive" id="colin-pic" alt="">
+                <div class="member-description-mobile">
+                    Colin Gallacher, Co-founder<br>
+                    Masters Robotics<br>
+                    McGill University<br>
+                    crgallacher@gmail.com
+                </div>
+            </div>
+            <div class="col-sm-4" id="arash" class="member">
+                <img src="{{ STATIC_URL }}img/arash-professional.png" class="img-responsive" id="arash-pic" alt="">
+                <div class="member-description-mobile">
+                    Arash Mohtat, Co-founder<br>
+                    PhD Haptics<br>
+                    McGill University<br>
+                    mohtat.arash@gmail.com
+                </div>
+            </div>
+            <div class="col-sm-4" id="steve" class="member">
+                <img src="{{ STATIC_URL }}img/steve-professional.png" class="img-responsive" id="steve-pic" alt="">
+                <div class="member-description-mobile">
+                    Steven Ding, Co-founder<br>
+                    Masters Electrical Engineering<br>
+                    McGill University<br>
+                    steveding1@gmail.com
+                </div>
+            </div>
+        </div>
+        <div class="container" id="container-top">
+            <div class="col-sm-4" id="colin" class="member">
+                <div class="member-description" id="colin-description">
+                    <br class="description-break">
+                    Colin Gallacher, Co-founder<br>
+                    Masters Robotics<br>
+                    McGill University
+                    <br><br>
+                    crgallacher@gmail.com
+                </div>
+            </div>
+            <div class="col-sm-4" id="arash" class="member">
+                <div class="member-description" id="arash-description">
+                    <br class="description-break">
+                    Arash Mohtat, Co-founder<br>
+                    PhD Haptics<br>
+                    McGill University
+                    <br><br>
+                    mohtat.arash@gmail.com
+                </div>
+            </div>
+            <div class="col-sm-4" id="steve" class="member">
+                <div class="member-description" id="steve-description">
+                    <br class="description-break">
+                    Steven Ding, Co-founder<br>
+                    Masters Electrical Engineering<br>
+                    McGill University
+                    <br><br>
+                    steveding1@gmail.com
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: location and more contact information -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-12">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://www.angel.co/haply-1" id="haply-angellist" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-angellist"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/haply_robotics" id="haply-twitter" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                        <h5>Montreal, QC</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Cadded model modal --> 
+    <div class="modal fade" id="kit-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" id="modal-close-sign">&times;</span></button>
+                    <h4 class="modal-title">The Haplet</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD1.png">
+                            </div>
+
+                            <div class="item">
+                                <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD2.png">
+                            </div>
+
+                            <div class="item">
+                                <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD3.png">
+                            </div>
+
+                            <div class="item">
+                                <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD4.png">
+                            </div>
+
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" id="left-carousel" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" id="right-carousel" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <!-- <br>
+                    <ul class="list-group">
+                        <li class="list-group-item">Specs</li>
+                        <li class="list-group-item">Get</li>
+                        <li class="list-group-item">Listed</li>
+                        <li class="list-group-item">Here</li>
+                        <li class="list-group-item">!</li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+
+    <!-- bootstrap -->
+    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+
+    <!-- javascript plugin for header animation -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{{ STATIC_URL }}js/classie.js"></script>
+    <script src="{{ STATIC_URL }}js/cbpAnimatedHeader.js"></script>
+
+    <!-- contact form validation and ajax -->
+    <script src="{{ STATIC_URL }}js/jqBootstrapValidation.js"></script>
+
+    <!-- custom theme javascript -->
+    <script src="{{ STATIC_URL }}js/freelancer.js"></script>
+
+    <!-- ball demo --> 
+    <script src="{{ STATIC_URL }}js/d3.min.js"></script>
+    <script src="{{ STATIC_URL }}js/ball_demo.js"></script>
+
+    <!-- Google Analytics: slightly faster version for modern browsers -->
+    <!-- 
+    <script async src='//www.google-analytics.com/analytics.js'></script>
+    <script>
+        window.ga = window.ga || function () { 
+            (ga.q = ga.q || []).push(arguments)
+        };
+        
+        ga.l =+ new Date;
+        
+        ga('create', 'UA-XXXX-Y', 'auto');
+        ga('send', 'pageview');
+    </script>
+     -->
+
+    <!-- Google Analytics -->
+    <script>
+        /**
+         * Creates a temporary global ga object and loads analy tics.js.
+         * Paramenters o, a, and m are all used internally.  They could have been declared using 'var',
+         * instead they are declared as parameters to save 4 bytes ('var ').
+         *
+         * @param {Window}      i The global context object.
+         * @param {Document}    s The DOM document object.
+         * @param {string}      o Must be 'script'.
+         * @param {string}      g URL of the analytics.js script. Inherits protocol from page.
+         * @param {string}      r Global name of analytics object.  Defaults to 'ga'.
+         * @param {DOMElement?} a Async script tag.
+         * @param {DOMElement?} m First script tag in document.
+         */
+        (function (i, s, o, g, r, a, m) {
+            // Acts as a pointer to support renaming.
+            i['GoogleAnalyticsObject'] = r; 
+
+            // Creates an initial ga() function.  The queued commands will be executed once analytics.js loads.
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            },
+
+            // Sets the time (as an integer) this tag was executed.  Used for timing hits.
+            i[r].l = 1 * new Date();
+
+            // Insert the script tag asynchronously.  Inserts above current tag to prevent blocking in
+            // addition to using the async attribute.
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        // Function to send an event 
+        var send_event = function (obj_class, user_event) {
+            $("." + obj_class).on(user_event, function () {
+                var event_name = $(this).attr('id');
+                ga('send', 'event', obj_class, event_name, {useBeacon: true});
+            });
+        };
+
+        // Create the tracker with default parameters
+        ga('create', 'UA-66010002-1', 'auto'); 
+
+        // Send the regular pageview hit
+        ga('send', 'pageview');
+
+        // Send a hit when user clicks on youtube video 
+        send_event("video-link", "click");
+
+        // Send a hit when user accesses external pages (twitter, angellist, etc)
+        send_event("btn-social", "click");
+
+        // Send a hit when user hovers over team members  
+        send_event("member-description", "mouseout");
+
+        // Send a hit when user clicks on one of header items
+        send_event("header-button", "click");
+
+        // Send a hit when user clicks through pictures 
+        send_event("carousel-control", "click");
+
+        // Send a conversion hit when user enters email 
+        $("#signup-button").on("click", function () {
+            // Get the email 
+            var email = $("#email").val();
+            ga('send', 'event', 'signup', email, {useBeacon: true});
+        });
+
+        // Send the amount of the time the user spent playing with the demo 
+        window.onbeforeunload = function () {
+            ga('send', 'event', 'd3-demo', String(PLAY_TIME / 1000));
+
+            // Can't use this because GA doesn't allow you to see the event values 
+            // on an individual basis, so store the value in action instead 
+            // ga('send', {
+            //     'hitType': 'event',
+            //     'eventCategory': 'd3-demo',
+            //     'eventAction': 'play',
+            //     'eventLabel': 'test',
+            //     'eventValue': Math.round(PLAY_TIME),
+            //     useBeacon: true
+            // });
+        };
+
+
+    </script>
+
+
+    <!-- Team member hover and checkbox functionality --> 
+    <!-- This is bad, should just do this with css but wasn't working --> 
+    <script type="text/javascript">
+
+        /* Team member hover functionality */
+
+        // Get the id of the description div 
+        var description_id = function (obj) {
+           return "#" + $(obj).attr("id").split("-")[0] + "-description"; 
+        };
+
+        // Show the team member's description 
+        $(".img-responsive").hover(function () {
+            $(description_id(this)).fadeIn("slow");
+        });
+        // Hide the team member's description
+        $(".member-description").mouseout(function () {
+           $(description_id(this)).fadeOut("slow");
+        });
+
+        /* Checkbox functionality */
+        var checked = false;
+        $("#beta-check").click(function () {
+            // Uncheck 
+            if (checked) {
+                checked = false;
+                $(".glyphicon-ok").removeClass("ok-active");
+            }
+
+            // Check
+            else {
+                checked = true;
+                $(".glyphicon-ok").addClass("ok-active");
+            }
+            $("#actual-checkbox").click();
+        });
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- bootstrap css -->
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- customized css -->
+    <link href="{{ STATIC_URL }}css/brochure.css" rel="stylesheet">
+
+    <!-- custom fonts -->
+    <link href="{{ STATIC_URL }}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <style>
+        #logo-area {
+            background-color: #66236A;
+            margin-bottom: -60px;
+        }
+        #catchphrase {
+            color: white;
+        }
+        #explanation {
+            background-color: white;
+            color: #333;
+            padding: 50px;
+        }
+        #monitors {
+            background-color: #66236A;
+            margin-top: -80px;
+            color: white    ;
+        }
+        img {
+            margin-top: -70px;
+            margin-left: -10px;
+        }
+        #url {
+            margin-top: -50px;
+            margin-bottom: -100px;
+            margin-left: -25px;
+            color: #333;
+        }
+        #haply-logo {
+            margin-left: 10px;
+        }
+        /*.resources {
+          font-size: 14pt;
+        }*/
+    </style>
+
+</head>
+
+
+<body id="page-top" class="index">
+
+    <!-- <div class="row" id="demo"> -->
+        <!-- Where the SVG will be appended --> 
+        <!--<div class="demo"></div>-->
+        <!-- <h4 id="catchphrase">
+            Adding touch to change the way we interact with our digital worlds -->
+            <!--<span id="haply-highlight">Haply</span> is bringing touch to your virtual world-->
+       <!--  </h4>
+    </div> -->
+    <section id="logo-area">
+        <a href="/"><img src="{{STATIC_URL}}img/loooogo.png" id="haply-logo"/></a>
+    </section>
+
+    <!-- The technology/about section -->
+    <section id="explanation">
+      <h3>The Kit</h3>
+      <img src="{{STATIC_URL}}img/kit_image.png" style="margin: 0px 0px;">
+      <h3>The CAD</h3>
+      <img src="{{STATIC_URL}}img/labeled_CAD.png" style="margin: 0px 0px;">
+      <h3>The 3D Prints</h3>
+      <img src="{{STATIC_URL}}img/evolution.png" style="margin: 0px 0px;">
+      <h3>The Class</h3>
+      <img src="{{STATIC_URL}}img/colin_talking.jpg" style="margin: 0px 0px;width:624px;">
+
+    </section>
+
+    <section>
+        <div class="row contact" id="url">
+            <h4>Adding touch to change the way we interact <br>with our digital worlds<br></h4>
+        </div>
+    </section>
+
+    <!-- ball demo --> 
+    <!--
+    <script src="{{ STATIC_URL }}js/jquery-1.11.3.min.js"></script>
+    <script src="{{ STATIC_URL }}js/d3.min.js"></script>
+    <script src="{{ STATIC_URL }}js/brochure.js"></script>
+-->
+
+
+</body>
+
+</html>
