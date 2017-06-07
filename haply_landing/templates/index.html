@@ -157,44 +157,7 @@
             </div>
         </div>
     </section>
-    <section id="reserve">
-        <div class="container">
-                <div class="row">
-                    <!-- Begin MailChimp Signup Form -->
-                    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-                    <style type="text/css">
-                        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-                           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                    </style>
-                    <div id="mc_embed_signup">
-                    <form action="//haply.us16.list-manage.com/subscribe/post?u=aeeedf602f1193fcd5b49e0bc&amp;id=c851945451" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                        <h2>Reserve your kit for the production run</h2>
-                    <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                    <div class="mc-field-group size1of2">
-                        <label for="mce-EMAIL">Email Address  <span class="asterisk" style="float:right">*</span></label>
-                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-                    </div>
-                    <div class="mc-field-group size1of2">
-                        <label for="mce-MMERGE3">Number of kits </label>
-                        <input type="number" name="MMERGE3" class="" value="" id="mce-MMERGE3">
-                    </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_aeeedf602f1193fcd5b49e0bc_c851945451" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn reserve-btn"></div>
-                        </div>
-                    </form>
-                    </div>
-                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='MMERGE3';ftypes[3]='number';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                    <!--End mc_embed_signup-->
-                </div>
-            </div>
 
-    </section>
     <!-- Contact/beta test section -->
     <section id="contact">
         <div class="container">
@@ -203,14 +166,16 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8 text-center">
                     <!-- <h2 id="call-to-action">Sign up for our preorder!</h2> -->
-                    <h2 id="call-to-action">THE HAPLY PLATFORM</h2>
+                    <h2>The Haply Platform</h2>
+                    <hr/>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
             <br>
             <!-- The carousel of images --> 
             <div class="row">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="col-md-8 col-lg-6">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -222,23 +187,22 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img class="cad" src='{% static "img/cadded-model/CAD1.png" %}'>
+                            <img class="cad" src='{% static "img/1.jpg" %}'>
                         </div>
 
                         <div class="item">
-                            <img class="cad" src='{% static "img/cadded-model/CAD2.png" %}'>
+                            <img class="cad" src='{% static "img/2.jpg" %}'>
                         </div>
 
                         <div class="item">
-                            <img class="cad" src='{% static "img/cadded-model/CAD3.png" %}'>
+                            <img class="cad" src='{% static "img/3.jpg" %}'>
                         </div>
 
                         <div class="item">
-                            <img class="cad" src='{% static "img/cadded-model/CAD4.png" %}'>
+                            <img class="cad" src='{% static "img/4.jpg" %}'>
                         </div>
 
                     </div>
-
                     <!-- Left and right controls -->
                     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="carousel-left">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -248,37 +212,75 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    </div>
+
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <img id="computer-gif" class="haplet-gif" src='{% static "img/gifs/computer.gif" %}'>
-                    <img id="tablet-gif" class="haplet-gif" src='{% static "img/gifs/tablet.gif" %}'>
-                </div>
+                    <div class="col-md-8 col-lg-6" style="overflow-x: hidden">
+                        <img style="height: 411px" src='{% static "img/5.gif" %}' />
+                    </div>
                 <div class="col-md-2"></div>
             </div>
             <br>
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <p id="call-to-action-text">
-
-                        <!-- Sign up here to be on an advanced order list for our kit - you'll be notified as soon as it's ready for pre-order! The kit comes with the Haplet, which easily clips on to your tablet or computer screen, usage instructions, an API, online support, and some demo apps to get you started. If you're a maker, you'll have a full suite of tools to tinker with the hardware and develop your own awesome happs.  -->
-
-                        For more information about the Haplet and to stay up to date on our development process, sign up here! Don't forget to check out some cool demos <a class="video-link" id="video-1" href="https://youtu.be/n3IKoW7KBCE" target="_blank"><b><u>here</u></b></a> and <a class="video-link" href="https://youtu.be/nK020GU9vF4" id="video-2" target="_blank"><b><u>here</u></b></a>. 
-
+                <div class="col-lg-12">
+                    <p style="font-weight: 400">
+                        The Haply device is a highly robust and configurable open-source haptic hardware development platform. Base on the Arduino Due microcontroller board. The platform allows you to recreate the sense of touch in 2D and 3D virtual environments. The configurable nature of the device gives you the ability to develop force-feedback haptic applications ranging from simplistic 1-degree-of-freedom  to sophisticated 4-degree-of-freedom  devices.
+                        <br/>
+                        <br/>
+                        Don't forget to check out some cool demos <a class="video-link" id="video-1" href="https://youtu.be/n3IKoW7KBCE" target="_blank"><b><u>here</u></b></a> and <a class="video-link" href="https://youtu.be/nK020GU9vF4" id="video-2" target="_blank"><b><u>here</u></b></a>. 
                     </p>
+                    
+
                     <!-- <p id="pricetag">$149.99</p> -->
                 </div>
                 <div class="col-md-2"></div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    
+        </div>
+    </section>
+
+        <section id="reserve" style="padding-top:0">
+        <div class="container">
+
+                <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center form-reservation">
+                    <div class="col-lg-12 text-center">
+                        <h1>Reserve your kit for the production run</h1>
+
+                        <hr/>
+                    </div>
+                    <!-- Begin MailChimp Signup Form -->
+                    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+                    <style type="text/css">
+                        #mc_embed_signup{background:#fff; clear:left; font:15px Helvetica,Arial,sans-serif;}
+                        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                    </style>
+                    <div id="mc_embed_signup">
+                    <form action="//haply.us16.list-manage.com/subscribe/post?u=aeeedf602f1193fcd5b49e0bc&amp;id=c851945451" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                    <div class="mc-field-group size1of2">
+                        <label for="mce-EMAIL">Email Address </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                    </div>
+                    <div class="mc-field-group size1of2">
+                        <label for="mce-MMERGE3">Number of kits </label>
+                        <input type="number" name="MMERGE3" class="" value="" id="mce-MMERGE3">
+                    </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_aeeedf602f1193fcd5b49e0bc_c851945451" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Reserve" name="subscribe" class="btn reserve-btn" style="width: 100%"></div>
+                        </div>
+                    </form>
+                    </div>
+                    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='MMERGE3';ftypes[3]='number';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                    <!--End mc_embed_signup-->
+                </div>
                 </div>
             </div>
-        </div>
+
     </section>
 
         <!-- The team section -->
@@ -294,63 +296,35 @@
                 <div class="col-lg-2"></div>
             </div>
             <br>
-            <div class="col-sm-4" id="colin" class="member">
-                <img src='{% static "img/colin-professional.png" %}' class="img-responsive" id="colin-pic" alt="">
-                <div class="member-description-mobile">
-                    Colin Gallacher, Co-founder<br>
-                    Masters Robotics<br>
-                    McGill University<br>
-                    crgallacher@gmail.com
+            <div class="col-sm-4" id="colin" class="member" >
+                <div class="member" style="background-image: url('{% static "img/colin-professional.png" %}')" >
+                    <div class="member-description-mobile">
+                        Colin Gallacher, Member<br>
+                        Masters Robotics<br>
+                        McGill University<br>
+                        crgallacher@gmail.com
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4" id="arash" class="member">
-                <img src='{% static "img/arash-professional.png" %}' class="img-responsive" id="arash-pic" alt="">
-                <div class="member-description-mobile">
-                    Arash Mohtat, Co-founder<br>
-                    PhD Haptics<br>
-                    McGill University<br>
-                    mohtat.arash@gmail.com
+            <div class="col-sm-4" id="steve">
+                <div class="member"  style="background-image: url('{% static "img/steve-professional.png" %}')">
+                    <div class="member-description-mobile">
+                        Steven Ding, Member<br>
+                        Masters Electrical Engineering<br>
+                        McGill University<br>
+                        steveding1@gmail.com
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-4" id="steve" class="member">
-                <img src='{% static "img/steve-professional.png" %}' class="img-responsive" id="steve-pic" alt="">
-                <div class="member-description-mobile">
-                    Steven Ding, Co-founder<br>
-                    Masters Electrical Engineering<br>
-                    McGill University<br>
-                    steveding1@gmail.com
-                </div>
-            </div>
-        </div>
-        <div class="container" id="container-top">
-            <div class="col-sm-4" id="colin" class="member">
-                <div class="member-description" id="colin-description">
-                    <br class="description-break">
-                    Colin Gallacher, Co-founder<br>
-                    Masters Robotics<br>
-                    McGill University
-                    <br><br>
-                    crgallacher@gmail.com
-                </div>
-            </div>
-            <div class="col-sm-4" id="arash" class="member">
-                <div class="member-description" id="arash-description">
-                    <br class="description-break">
-                    Arash Mohtat, Co-founder<br>
-                    PhD Haptics<br>
-                    McGill University
-                    <br><br>
-                    mohtat.arash@gmail.com
-                </div>
-            </div>
-            <div class="col-sm-4" id="steve" class="member">
-                <div class="member-description" id="steve-description">
-                    <br class="description-break">
-                    Steven Ding, Co-founder<br>
-                    Masters Electrical Engineering<br>
-                    McGill University
-                    <br><br>
-                    steveding1@gmail.com
+
+            <div class="col-sm-4" id="arash">
+                <div class="member" class="member" style="background-image: url('{% static "img/arash-professional.png" %}')">
+                    <div class="member-description-mobile" >
+                        Arash Mohtat, Advisor<br>
+                        PhD Haptics<br>
+                        McGill University<br>
+                        mohtat.arash@gmail.com
+                    </div>
                 </div>
             </div>
         </div>
@@ -384,67 +358,6 @@
         </a>
     </div>
 
-    <!-- Cadded model modal --> 
-    <div class="modal fade" id="kit-modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" id="modal-close-sign">&times;</span></button>
-                    <h4 class="modal-title">The Haplet</h4>
-                </div>
-                <div class="modal-body">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <li data-target="#myCarousel" data-slide-to="3"></li>
-                        </ol>
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img class="cad" src='{% static "img/cadded-model/CAD1.png" %}'>
-                            </div>
-
-                            <div class="item">
-                                <img class="cad" src='{% static "img/cadded-model/CAD2.png" %}'>
-                            </div>
-
-                            <div class="item">
-                                <img class="cad" src='{% static "img/cadded-model/CAD3.png" %}'>
-                            </div>
-
-                            <div class="item">
-                                <img class="cad" src='{% static "img/cadded-model/CAD4.png" %}'>
-                            </div>
-
-                        </div>
-
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" id="left-carousel" href="#myCarousel" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" id="right-carousel" href="#myCarousel" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-
-                    <!-- <br>
-                    <ul class="list-group">
-                        <li class="list-group-item">Specs</li>
-                        <li class="list-group-item">Get</li>
-                        <li class="list-group-item">Listed</li>
-                        <li class="list-group-item">Here</li>
-                        <li class="list-group-item">!</li>
-                    </ul> -->
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- jquery -->
     <script src='{% static "js/jquery.js" %}'></script>
@@ -574,45 +487,6 @@
 
     </script>
 
-
-    <!-- Team member hover and checkbox functionality --> 
-    <!-- This is bad, should just do this with css but wasn't working --> 
-    <script type="text/javascript">
-
-        /* Team member hover functionality */
-
-        // Get the id of the description div 
-        var description_id = function (obj) {
-           return "#" + $(obj).attr("id").split("-")[0] + "-description"; 
-        };
-
-        // Show the team member's description 
-        $(".img-responsive").hover(function () {
-            $(description_id(this)).fadeIn("slow");
-        });
-        // Hide the team member's description
-        $(".member-description").mouseout(function () {
-           $(description_id(this)).fadeOut("slow");
-        });
-
-        /* Checkbox functionality */
-        var checked = false;
-        $("#beta-check").click(function () {
-            // Uncheck 
-            if (checked) {
-                checked = false;
-                $(".glyphicon-ok").removeClass("ok-active");
-            }
-
-            // Check
-            else {
-                checked = true;
-                $(".glyphicon-ok").addClass("ok-active");
-            }
-            $("#actual-checkbox").click();
-        });
-
-    </script>
 
 
 </body>

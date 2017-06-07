@@ -51,39 +51,42 @@ h1, h2, h3, h4, h5, h6 {
     /*border: 3px solid white;*/
     border-radius: 1px;
 }
-.member-description {
-    display: none;
-    margin: auto;
-    position: relative;
-    z-index: 3;
-    background: black;
-    width: 230px;
-    height: 200px;
-    opacity: 0.7;
-    text-align: center;
-    font-size: 20px;
-}
+
 .description-break {
     margin-top: 30px;
 }
-.member-name {
-    background: white;
-    color: #282828;
-    position: absolute;
-    padding: 5px;
+.member-description-mobile {
+ opacity:0;
+ background: rgba(0,0,0, 0.5);
+ padding: 10px;
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ font-size: 12px;
+  transition: 0.2s opacity;
 }
-.member-name:hover {
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    border-bottom: 3px solid black;
+.member {
+  height: 220px;
+  width: 240px;
+  margin: auto;
+  display: block;
+  position: relative;
+
+  background-size: cover;
 }
+.member:hover .member-description-mobile {
+    transition: 0.2s opacity;
+    opacity: 1;
+}
+
 .img-responsive:hover {
     /*border: 2px solid #fff;*/
     border: 0;
 }
 #haply-email {
-    /*border-bottom: 3px solid #70026D;*/
-    background: #66236A;
+    border-bottom: 3px solid white;
+    padding: 4px;
 }
 
 header {
@@ -115,9 +118,7 @@ header .intro-text .skills {
     font-weight: 100;
 }
 
-.member-description-mobile {
-    display: none;
-}
+
 .demo {
     padding-top: 50px;
 }
@@ -139,17 +140,9 @@ header .intro-text .skills {
         margin-bottom: 50px;
         margin: 0 auto;
     }
-    .member-description {
-        position: absolute;
-        left: -1080px;
-        z-index: -5;
-    }
     .member-description-mobile {
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-        /*background: black;*/
-        /*width: 230px;*/
+        opacity: 0.6;
+        text-align: left;
     }
 
     /* Just remove the monitor image */
@@ -340,7 +333,11 @@ section.success a.active {
 /*#d3-pic {
     display: none;
 }*/
-
+.form-reservation {
+    padding: 63px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 20px #e2e2e2;
+}
 /* The technology section */
 #portfolio {
     /*background-color: #70026D;*/
@@ -367,19 +364,16 @@ section.success a.active {
 
 /* The carousel display */
 #myCarousel {
-    width: 63%;
     margin: 0 auto;
 }
 
 /* The team section */
 #about {
-    background-color: #005878;
-    /*border-bottom: 10px solid #70026D;*/
+    background-color: #5e3166;
     color: white;
 }
 
 #team-section-header {
-    border: 2px solid white;
     padding: 10px;
 }
 
@@ -515,9 +509,9 @@ section.success a.active {
     height: 100%;
     opacity: 0;
     /*background: rgba(24,188,156,.9);*/
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
+    -webkit-transition: all ease .1s;
+    -moz-transition: all ease .1s;
+    transition: all ease .1s;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {

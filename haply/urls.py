@@ -12,5 +12,3 @@ urlpatterns = [
     url(r'^kit/', views.kit, name='kit')    
 ]
 
-
-   # url(r'^brochure/', views.brochure, name='brochure'),
