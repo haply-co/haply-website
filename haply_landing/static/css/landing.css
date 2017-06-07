@@ -252,10 +252,13 @@ section {
 }
 
 section h2 {
-    margin: 0;
     font-size: 3em;
 }
 
+section p {
+    font-weight: 100;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 section.success {
     color: #fff;
     background: #18bc9c;
@@ -341,7 +344,7 @@ section.success a.active {
 /* The technology section */
 #portfolio {
     /*background-color: #70026D;*/
-    background-color: #66236A;
+    background-color: #5e3166;
     color: white;
     /*border-bottom: 10px solid #005878;*/
 }
@@ -352,7 +355,11 @@ section.success a.active {
 }
 
 #monitors {
-    margin-left: -20px;
+    border-left: 1px solid #AAA;
+    padding: 27px;
+    margin-left: 15px;
+    width: 100%;
+    margin-top: 16%;
 }
 #tech-break {
     height: 50px;
