@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +13,14 @@
     <title> Haply Robotics </title>
 
     <!-- bootstrap css -->
-    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+    <link href='{% static "css/bootstrap.min.css" %}' rel="stylesheet">
 
     <!-- customized css -->
-    <link href="{{ STATIC_URL }}css/landing.css" rel="stylesheet">
+    <link href='{% static "css/landing.css" %}' rel="stylesheet">
 
     <!-- custom fonts -->
-    <link href="{{ STATIC_URL }}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='{% static "font-awesome/css/font-awesome.min.css" %}' rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:100,200,400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -47,11 +48,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
+                
                 <a class="navbar-brand" href="#page-top"> 
                     
                     <div id="haply-logo">
-                        <img src="{{ STATIC_URL }}img/haply-design/logo-horizontal.png" width="210px" height="70px"/>
+                        <img src='{% static "img/haply-design/logo-horizontal.png" %}' />
                     </div>
 
                     <!-- <div id="haply-title">Haply</div>  -->
@@ -86,19 +87,28 @@
     <!-- Cool landing display area with little demo -->
     <header>
         <div class="container">
-            <div class="row">
-                <h3>Adding touch to technology to change the way we interact with our digital worlds</h3>
-                <img id="d3-pic" src="{{ STATIC_URL }}img/haply-design/d3-demo.png" width="400" height="300"/>
-            </div>
-            <br><br><br><br><br>
-            <div class="row">
-                <!-- Where the SVG will be appended --> 
-                <div class="demo"></div>
-            </div>
 
             <div class="row">
-                <h3>A portable, low-cost, open-source haptic device, the Haplet aims to democratize force feedback haptics and make touch accessible for all</h3><br>
-                <img id="os-logo" src="{{ STATIC_URL }}img/open-source-gear.png" width="100" height="80"/>
+                
+               
+                <!-- Where the SVG will be appended --> 
+                <div class="demo" ></div>
+                
+            </div>
+            <div class="row">
+                <img id="d3-pic" src='{% static "img/haply-design/d3-demo.png" %}' width="400" height="
+                300"/>
+               <img id="os-logo" src='{% static "img/open-source-gear.png" %}' width="50" height="40"/>
+                <h2>The most <b>affordable & configurable</b> open-source <br/>haptic development platform.</h2>
+                <br/>
+
+                <h4>Adding touch to change the way we <b>interact</b> with our digital worlds</h4>
+                <br/>
+                
+                
+                 
+                <a class="btn reserve-btn" href="#reserve"> Reserve one now! </a>
+                
             </div>
             
         </div>
@@ -110,7 +120,7 @@
             <div class="row">
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8 text-center">
-                    <h2 id="tech-section-header">The Technology</h2>
+                    <h2 id="tech-section-header">Haptics is the science of touch</h2>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
@@ -121,7 +131,7 @@
                     <p>
                         Haptics is the science of <span class="yellow-highlight">touch</span>. When you are interacting with objects in your day-to-day life, you are applying forces to those objects, but also receiving a force back. This feedback system allows us to feel the pull of a taught bow or the weight of a caught ball. 
                     </p>
-                    <img src="{{ STATIC_URL }}img/haply-design/monitors-medium.png" id="monitors"/>
+                    <img src='{% static "img/haply-design/monitors-medium.png" %}' id="monitors"/>
                     <div id="tech-break"></div>
                     <p>
                         We are introducing technology that recreates this sense of touch in virtual environments, such as a game on your tablet or a surgical simulation running on your computer. Our device, called the Haplet, is the world's first device to use force-feedback haptic technology on a co-located screen, which means you can use it on any kind of screen, such as your tablet, mobile phone, monitor or laptop screen. 
@@ -162,19 +172,19 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD1.png">
+                            <img class="cad" src='{% static "img/cadded-model/CAD1.png" %}'>
                         </div>
 
                         <div class="item">
-                            <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD2.png">
+                            <img class="cad" src='{% static "img/cadded-model/CAD2.png" %}'>
                         </div>
 
                         <div class="item">
-                            <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD3.png">
+                            <img class="cad" src='{% static "img/cadded-model/CAD3.png" %}'>
                         </div>
 
                         <div class="item">
-                            <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD4.png">
+                            <img class="cad" src='{% static "img/cadded-model/CAD4.png" %}'>
                         </div>
 
                     </div>
@@ -193,8 +203,8 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <img id="computer-gif" class="haplet-gif" src="{{ STATIC_URL }}img/gifs/computer.gif">
-                    <img id="tablet-gif" class="haplet-gif" src="{{ STATIC_URL }}img/gifs/tablet.gif">
+                    <img id="computer-gif" class="haplet-gif" src='{% static "img/gifs/computer.gif" %}'>
+                    <img id="tablet-gif" class="haplet-gif" src='{% static "img/gifs/tablet.gif" %}'>
                 </div>
                 <div class="col-md-2"></div>
             </div>
@@ -216,58 +226,6 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     
-                    <!-- Pre-order form --> 
-                    <!-- <form name="sentMessage" id="contactForm" novalidate action="{% url 'bye' %}" method="post"> -->
-                    <form action="/bye/" method="post">
-                        {% csrf_token %}
-
-                        <!-- The user's name --> 
-                        <!-- <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <input type="text" class="form-control" placeholder="Name" id="name" name="name" required data-validation-required-message="Please enter your name.">
-                                <p class="help-block text-danger"></p>
-
-                            </div>
-                        </div> -->
-                        <!-- The user's email address --> 
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <input type="email" class="form-control" placeholder="Email" id="email" name="email" required data-validation-required-message="Please enter your email address.">
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <!-- The user's message --> 
-                        <!-- <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <textarea rows="5" class="form-control" placeholder="Comments? Questions? Interested in beta testing? Please share!" id="message" data-validation-required-message="Please enter a message." name="message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            
-                            </div>
-                        </div> -->
-                        <br>
-                        <div class="row">
-                            <!-- The user's beta testing choice --> 
-                            
-                           <!--  <div class="col-lg-10 col-md-10 col-sm-6">
-                                <p id="interested"> I am interested in beta testing! </p>
-                            </div>
-
-                            <div class="col-lg-2 col-md-2 col-sm-6">
-                                <div id="beta-check"><span class="glyphicon glyphicon-ok"></span>
-                            </div> -->
-
-                            <!-- Hidden input checkbox --> 
-                            <!-- <input type="checkbox" id="actual-checkbox" name="beta" style="display:none"> -->
-
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg" id="signup-button">Sign me up!</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
@@ -287,7 +245,7 @@
             </div>
             <br>
             <div class="col-sm-4" id="colin" class="member">
-                <img src="{{ STATIC_URL }}img/colin-professional.png" class="img-responsive" id="colin-pic" alt="">
+                <img src='{% static "img/colin-professional.png" %}' class="img-responsive" id="colin-pic" alt="">
                 <div class="member-description-mobile">
                     Colin Gallacher, Co-founder<br>
                     Masters Robotics<br>
@@ -296,7 +254,7 @@
                 </div>
             </div>
             <div class="col-sm-4" id="arash" class="member">
-                <img src="{{ STATIC_URL }}img/arash-professional.png" class="img-responsive" id="arash-pic" alt="">
+                <img src='{% static "img/arash-professional.png" %}' class="img-responsive" id="arash-pic" alt="">
                 <div class="member-description-mobile">
                     Arash Mohtat, Co-founder<br>
                     PhD Haptics<br>
@@ -305,7 +263,7 @@
                 </div>
             </div>
             <div class="col-sm-4" id="steve" class="member">
-                <img src="{{ STATIC_URL }}img/steve-professional.png" class="img-responsive" id="steve-pic" alt="">
+                <img src='{% static "img/steve-professional.png" %}' class="img-responsive" id="steve-pic" alt="">
                 <div class="member-description-mobile">
                     Steven Ding, Co-founder<br>
                     Masters Electrical Engineering<br>
@@ -397,19 +355,19 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD1.png">
+                                <img class="cad" src='{% static "img/cadded-model/CAD1.png" %}'>
                             </div>
 
                             <div class="item">
-                                <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD2.png">
+                                <img class="cad" src='{% static "img/cadded-model/CAD2.png" %}'>
                             </div>
 
                             <div class="item">
-                                <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD3.png">
+                                <img class="cad" src='{% static "img/cadded-model/CAD3.png" %}'>
                             </div>
 
                             <div class="item">
-                                <img class="cad" src="{{ STATIC_URL }}img/cadded-model/CAD4.png">
+                                <img class="cad" src='{% static "img/cadded-model/CAD4.png" %}'>
                             </div>
 
                         </div>
@@ -439,25 +397,25 @@
     </div>
 
     <!-- jquery -->
-    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src='{% static "js/jquery.js" %}'></script>
 
     <!-- bootstrap -->
-    <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
 
     <!-- javascript plugin for header animation -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="{{ STATIC_URL }}js/classie.js"></script>
-    <script src="{{ STATIC_URL }}js/cbpAnimatedHeader.js"></script>
+    <script src='{% static "js/classie.js" %}'></script>
+    <script src='{% static "js/cbpAnimatedHeader.js" %}'></script>
 
     <!-- contact form validation and ajax -->
-    <script src="{{ STATIC_URL }}js/jqBootstrapValidation.js"></script>
+    <script src='{% static "js/jqBootstrapValidation.js" %}'></script>
 
     <!-- custom theme javascript -->
-    <script src="{{ STATIC_URL }}js/freelancer.js"></script>
+    <script src='{% static "js/freelancer.js" %}'></script>
 
     <!-- ball demo --> 
-    <script src="{{ STATIC_URL }}js/d3.min.js"></script>
-    <script src="{{ STATIC_URL }}js/ball_demo.js"></script>
+    <script src='{% static "js/d3.min.js" %}'></script>
+    <script src='{% static "js/ball_demo.js" %}'></script>
 
     <!-- Google Analytics: slightly faster version for modern browsers -->
     <!-- 

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!doctype html>
 <html>
   <head>
@@ -5,8 +6,8 @@
   	<style>
 	</style>
 
-  <script src="{{ STATIC_URL }}js/jquery-1.11.3.min.js"></script>
-  <script src="{{ STATIC_URL }}js/d3.min.js"></script>
+  <script src='{% static "js/jquery-1.11.3.min.js" %}'></script>
+  <script src='{% static "js/d3.min.js" %}'></script>
 
   <!--<script type="text/paperscript" canvas="canvas">-->
   <script type="text/javascript">

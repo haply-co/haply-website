@@ -5,7 +5,7 @@ $(document).ready(function () {
 	// var width = $("#canvas").width();
 	// var height = $("#canvas").height();
 
-	var width = 800, height = 500;
+	var width = 800, height = 450;
 
 	// This will let us know if the user is moving the stylus around
 	//var moving = false;
@@ -26,7 +26,7 @@ $(document).ready(function () {
 		tab.length = 600;
 		tab.width = tab.length / 1.4;
 		tab.padding = 35;
-		tab.top = {x: (width / 2) - (tab.length / 2), y: 30};
+		tab.top = {x: (width / 2) - (tab.length / 2), y: 10};
 		
 		// The black outline of the tablet 
 		tab.casing = svg.append("rect")
@@ -36,8 +36,6 @@ $(document).ready(function () {
 				.attr("height", tab.width)
 				.attr("rx", 23).attr("ry", 23)
 				.style("fill", "black")
-				.style("stroke", "grey")
-				.style("stroke-width", 2);
 		
 		// The screen of the tablet 
 		tab.screen = svg.append("rect")
@@ -46,9 +44,6 @@ $(document).ready(function () {
 					.attr("width", tab.length - (tab.padding * 2))
 					.attr("height", tab.width - (tab.padding * 2))
 					.style("fill", "white")
-					.style("fill", "#282828")
-					.style("stroke", "grey")
-					.style("stroke-width", 2);
 		
 		// On button 
 		var button_x = tab.top.x + 17;
@@ -56,9 +51,7 @@ $(document).ready(function () {
 		tab.button = svg.append("ellipse")
 					.attr("cx", button_x).attr("cy", button_y)
 					.attr("rx", 10).attr("ry", 10)
-					.style("fill", "black")
-					.style("stroke", "grey")
-					.style("stroke-width", 2);
+					.style("fill", "#333");
 		return tab;
 	}();
 
@@ -301,7 +294,7 @@ $(document).ready(function () {
 		var coords = d3.mouse(this);
 
 		// Don't move past the halfway line 
-		if (in_tablet(coords) && below(coords)) {
+		if (in_tablet(coords)) {
 
 			// Move the stylus
 			haplet.stylus.attr("cx", coords[0]);
@@ -331,6 +324,9 @@ $(document).ready(function () {
 		  	balls.root.px = coords[0];
 		  	balls.root.py = coords[1];
 		  	balls.force.resume();
+		}
+		else {
+			console.log("out")
 		}
 	});
 
